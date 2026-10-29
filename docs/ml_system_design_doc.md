@@ -420,11 +420,7 @@ LightGBM для классификации рассматривается как
 
 Бейзлайн должен отражать текущую логику приоритизации и использоваться как контрольная система при оценке MVP.
 
-<p align="center">
-      <img src="../imgs/baseline_schema.png" alt="baseline schema" width="300">
-</p>
-
-```
+```mermaid
 flowchart TD
     A["Событие или снимок траектории"] --> B["Расчёт доступных признаков"]
     B --> C["Инструкции и таблица правил"]
@@ -441,11 +437,7 @@ flowchart TD
 
 ### MVP: подготовка данных и обучение
 
-<p align="center">
-      <img src="../imgs/data_analysis_schema.png" alt="data analysis schema" width="300">
-</p>
-
-```
+```mermaid
 flowchart TD
     A["Исторические снимки инцидентов\nдо 10 000 записей"] --> B["Проверка качества данных и EDA"]
     B --> C["Анализ меток и экспертная проверка"]
@@ -468,11 +460,7 @@ flowchart TD
 
 ### MVP: применение модели и формирование очереди
 
-<p align="center">
-      <img src="../imgs/ml_system_schema.png" alt="ml system schema" width="300">
-</p>
-
-```
+```mermaid
 flowchart TD
     A["Новый снимок инцидента"] --> B["Валидация входных данных"]
     B --> C["Расчёт признаков\nиз доступной истории"]
